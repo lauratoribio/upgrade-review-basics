@@ -31,3 +31,23 @@ const users = [
         }
     },
 ]
+
+
+
+let mediaVolume = (users) => {
+
+    let suma = 0
+    let numVolume = 0
+    for(let user of users) {
+       for(let prop in user.favoritesSounds) {
+       suma += user.favoritesSounds[prop].volume
+       numVolume++
+    }
+}
+let media = suma / numVolume
+return media
+}
+
+let resultado = mediaVolume(users)
+console.log(resultado)
+
