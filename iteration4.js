@@ -12,9 +12,7 @@ let findArrayIndex = (array, texto) => {
     let position = array.indexOf(item)
     if(texto === value) {
       console.log(value + " posicion: " + position)
-    } else {
-      console.log(value + " no existe")
-    }
+    } 
   }
 }
 
