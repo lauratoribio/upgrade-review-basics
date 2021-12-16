@@ -32,3 +32,73 @@ const users = [
         }
     },
 ]
+
+
+let favSound = (array) => {
+
+    let repetidos = {}
+
+    for(let user of users) {
+    
+    for(let sound in user.favoritesSounds) {
+    if (repetidos[sound] === undefined) {
+        repetidos[sound] = 1
+     } else {
+        repetidos[sound] += 1
+     }
+
+    }
+  }
+return repetidos
+}
+
+let objRepetidos = favSound(users)
+console.log(objRepetidos)
+
+
+
+
+// let contadorWaves = 0
+// let contadorRain = 0
+// let contadorFirecamp = 0
+// let contadorShower = 0
+// let contadorTrain = 0
+// let contadorWind = 0
+
+// for(let user of users) {
+//         for(let sound in user.favoritesSounds) {
+//          if(sound === "waves") {
+//             contadorWaves++
+//          }
+//          if(sound ==="rain") {
+//             contadorRain++
+//          }
+//          if(sound === "firecamp") {
+//             contadorFirecamp++
+//          }
+//          if(sound === "shower") {
+//             contadorShower++
+//          }
+//          if(sound === "train") {
+//             contadorTrain++
+//          }
+//          if(sound === "wind") {
+//             contadorWind++
+//          }
+
+//      }
+//  }
+
+
+// console.log("Nº repeticiones waves: " + contadorWaves)
+// console.log("Nº repeticiones rain: " + contadorRain)
+// console.log("Nº repeticiones firecamp: " + contadorFirecamp)
+// console.log("Nº repeticiones shower: " + contadorShower)
+// console.log("Nº repeticiones train: " + contadorTrain)
+// console.log("Nº repeticiones wind: " + contadorWind)
+
+//Otras forma de resolverlo
+
+
+
+
